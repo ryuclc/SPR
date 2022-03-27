@@ -1,0 +1,487 @@
+
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Audio samples from "Pronunciation dictionary-free multilingual speech synthesis based on continuous phonetic representations"</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css"/>
+    
+<script>
+      function play(path) {{
+        var player = document.getElementById('player');
+        player.src = path;
+        player.play();
+      }}
+    </script>
+
+    
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<style>
+.audio-cell {
+  /* Center audio widgets in the table cell. */
+  text-align: center;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+.audio-cell-padded { 
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.audio-header {
+  /* Don't wrap header text. */
+  white-space: nowrap;
+  /* Some breaking space between headers for readability. */   
+  padding-right: 4px; 
+  padding-left: 4px; 
+}
+.text-cell {
+  /* For uniformity and to wrap long text, limit the reference cell's width. */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.input-cell {
+  /* For uniformity and to wrap long reference text, limit the reference cell's width. */
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.sample audio {
+  vertical-align: middle;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.round-button {
+	box-sizing: border-box;
+	display:block;
+	width:30px;
+	height:30px;
+	padding-top: 8px;
+	padding-left: 3px;
+	line-height: 6px;
+	border: 1.2px solid #000;
+	border-radius: 50%;
+	color: #000;
+	text-align:center;
+	background-color: rgba(0,0,0,0.00);
+	font-size:6px;
+  box-shadow: 0px 0px 2px rgba(0,0,0,1);
+	transition: all 0.2s ease;
+}
+.round-button:hover {
+	background-color: rgba(0,0,0,0.0);
+	box-shadow: 0px 0px 4px rgba(0,0,0,1);
+}
+.round-button:active {
+	background-color: rgba(0,0,0,0.01);
+	box-shadow: 0px 0px 1px rgba(0,0,0,1);
+}
+</style>
+
+  </head>
+  <body>
+    
+    <article>
+      <header>
+        <h1>Audio samples from "Pronunciation dictionary-free multilingual speech synthesis based on continuous phonetic representations"</h1>
+      </header>
+    </article>
+   <!--  <div><p>
+	<b>Paper:</b> <a href="https://arxiv.org/abs/2011.03568">arXiv</a>
+	<a href="wavetaco-slides.pdf">slides</a>
+	<a href="wavetaco-poster.pdf">poster</a>
+    </p></div> -->
+    <div><p><b>Authors:</b> Chang Liu, Zhenhua Ling, Linghui Chen</p></div>
+    <div><p><b>Abstract:</b> This paper proposes a multilingual speech synthesis method which is based on continuous phonetic representations (CPR) and does not rely on the pronunciation dictionaries of target languages. State-of-the-art speech synthesis systems generally require language-specific pronunciation dictionaries to obtain phoneme sequences and use them as the input of acoustic models. However, it is usually difficult to acquire a large-scale and accurate enough pronunciation dictionary for a new language. In our proposed method, a language-independent automatic speech recognition (LI-ASR) model with a connectionist temporal classification (CTC) loss is first built to extract segment-level CPRs from the audio data of target languages. Then, a CPR-based acoustic model is designed, which first predicts CPRs from texts and then converts CPRs into mel spectrograms. The results of our experiments on six languages show that the proposed method outperformed the baseline method that directly predicted mel spectrograms from character sequences and the method that employed the discrete phonetic symbols recognized by LI-ASR as intermediate representations. Its performance was also better than or comparable with the method that takes phoneme sequences as the input of acoustic models for the six target languages.</p></div>
+    <p class="toc_title">Contents</p>
+    <div id="toc_container">
+    <ul>
+      <li><a href="#English"> 1. Model comparison on English (LJSpeech)
+<li><a href="#Spanish"> 2. Model comparison on Spanish
+<li><a href="#Kazakh"> 3. Model comparison on Kazakh
+<li><a href="#Hindi"> 4. Model comparison on Hindi
+<li><a href="#Bulgarian"> 5. Model comparison on Bulgarian
+<li><a href="#Malay"> 6. Model comparison on Malay
+    </ul>
+    </div>
+  <a name="English"><h2>1. Model comparison on English (LJSpeech)</h2></a>
+<p>
+</p>
+    <table>
+      <thead><th>Text</th><th class="audio-header">Ground Truth</th>
+<th class="audio-header">Taco-Char</th>
+<th class="audio-header">Taco-Phone</th>
+<th class="audio-header">DPS</th>
+<th class="audio-header">Proposed</th></thead>
+      <tbody><tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Yet it must have been abundantly plain to the reader that the other evils existing were great and glaring. A brief summary of them will best prove this.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/GT/LJ003-0221.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Taco-Char/LJ003-0221.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Taco-Phone/LJ003-0221.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/DPS/LJ003-0221.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Proposed/LJ003-0221.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">He was in the transport side, when one of his fellows, in endeavoring to strike another prisoner with a large poker, missed his aim, and struck Watkins' knee</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/GT/LJ006-0243.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Taco-Char/LJ006-0243.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Taco-Phone/LJ006-0243.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/DPS/LJ006-0243.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Proposed/LJ006-0243.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">A committee of aldermen was forthwith appointed to report upon the inspectors' report,</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/GT/LJ007-0181.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Taco-Char/LJ007-0181.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Taco-Phone/LJ007-0181.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/DPS/LJ007-0181.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Proposed/LJ007-0181.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">there were still many shocking incidents at executions, owing to the bungling and unskilful way in which the operation was performed.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/GT/LJ009-0232.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Taco-Char/LJ009-0232.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Taco-Phone/LJ009-0232.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/DPS/LJ009-0232.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Proposed/LJ009-0232.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Another man was hired, himself a convict, whose fees for self and wife were twelve guineas.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/GT/LJ009-0302.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Taco-Char/LJ009-0302.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Taco-Phone/LJ009-0302.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/DPS/LJ009-0302.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/en/Proposed/LJ009-0302.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+</tbody>
+    </table>
+
+
+<a name="Spanish"><h2>2. Model comparison on Spanish</h2></a>
+<p>
+</p>
+    <table>
+      <thead><th>Text</th><th class="audio-header">Ground Truth</th>
+<th class="audio-header">Taco-Char</th>
+<th class="audio-header">Taco-Phone</th>
+<th class="audio-header">DPS</th>
+<th class="audio-header">Proposed</th></thead>
+      <tbody><tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Comparando otros lugares o sitios que hemos visitado, nos decepcionó.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/GT/00000390.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Taco-Char/00000390.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Taco-Phone/00000390.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/DPS/00000390.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Proposed/00000390.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">De la gente más linda y glamorosa, debería decir.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/GT/00001057.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Taco-Char/00001057.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Taco-Phone/00001057.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/DPS/00001057.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Proposed/00001057.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Su ex suegra, Tillie Wiecek, me dio su dirección.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/GT/00001493.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Taco-Char/00001493.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Taco-Phone/00001493.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/DPS/00001493.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Proposed/00001493.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">La hija del director está enamorada de ti.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/GT/00001511.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Taco-Char/00001511.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Taco-Phone/00001511.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/DPS/00001511.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Proposed/00001511.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">La vida es muy difícil para los indefensos en este mundo.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/GT/00010189.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Taco-Char/00010189.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Taco-Phone/00010189.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/DPS/00010189.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/es/Proposed/00010189.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+</tbody>
+    </table>
+
+
+<a name="Kazakh"><h2>3. Model comparison on Kazakh</h2></a>
+<p>
+</p>
+    <table>
+      <thead><th>Text</th><th class="audio-header">Ground Truth</th>
+<th class="audio-header">Taco-Char</th>
+<th class="audio-header">Taco-Phone</th>
+<th class="audio-header">DPS</th>
+<th class="audio-header">Proposed</th></thead>
+      <tbody><tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Аттила Батыс Римді айтқанына көндіріп алған соң, енді қайта айналып салық тапсырудан бас тартқан Византияға жаза жорығын жасауға қамданады.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/GT/00000224.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Taco-Char/00000224.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Taco-Phone/00000224.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/DPS/00000224.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Proposed/00000224.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Мүмкіндік болса, жұмыста ішетін түскі асты да үйден әзірлеп алып барыңыз.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/GT/00000386.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Taco-Char/00000386.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Taco-Phone/00000386.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/DPS/00000386.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Proposed/00000386.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Балаларға ұлттық ойындарды үйрету арқылы жас ұрпақтың денсаулығын реттеу, салауатты өмір сүруге жағдай жасау бүгінгі заман талабы.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/GT/00000593.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Taco-Char/00000593.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Taco-Phone/00000593.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/DPS/00000593.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Proposed/00000593.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Анамның қасына жатып ұйықтап едім, ол мені сол баяғы бала кездегідей құшақтап жатты.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/GT/00000599.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Taco-Char/00000599.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Taco-Phone/00000599.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/DPS/00000599.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Proposed/00000599.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Егер сізден жасы кіші адам сіздің қатеңізді айтып немесе сізге ескерту жасаса, оған ренжімейсіз бе?</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/GT/00000940.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Taco-Char/00000940.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Taco-Phone/00000940.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/DPS/00000940.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/kk/Proposed/00000940.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+</tbody>
+    </table>
+
+
+<a name="Hindi"><h2>4. Model comparison on Hindi</h2></a>
+<p>
+</p>
+    <table>
+      <thead><th>Text</th><th class="audio-header">Ground Truth</th>
+<th class="audio-header">Taco-Char</th>
+<th class="audio-header">Taco-Phone</th>
+<th class="audio-header">DPS</th>
+<th class="audio-header">Proposed</th></thead>
+      <tbody><tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">मार्ग की स्थिति छत्रपति शिवाजी स्टेशन के पास नहीं मिल सकती है.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/GT/00000751.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Taco-Char/00000751.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Taco-Phone/00000751.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/DPS/00000751.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Proposed/00000751.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">पांचवा चुना. यह जिस तरह से जुड़ा हुआ है</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/GT/00000886.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Taco-Char/00000886.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Taco-Phone/00000886.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/DPS/00000886.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Proposed/00000886.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">ताज महल पार्किंग स्थल मिला. क्या आप अब चलना चाहते हैं</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/GT/00000964.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Taco-Char/00000964.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Taco-Phone/00000964.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/DPS/00000964.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Proposed/00000964.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">हालांकि, शाम के शोज तक बिजनेस ठंडा पड़ने लगा था</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/GT/00001410.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Taco-Char/00001410.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Taco-Phone/00001410.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/DPS/00001410.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Proposed/00001410.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">लेकिन चहल ने वापसी की और ओवर की चौथी गेंद पर ही मिचेल सैंटनर को बोल्ड कर दिया.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/GT/00001965.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Taco-Char/00001965.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Taco-Phone/00001965.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/DPS/00001965.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/hi/Proposed/00001965.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+</tbody>
+    </table>
+
+
+<a name="Bulgarian"><h2>5. Model comparison on Bulgarian</h2></a>
+<p>
+</p>
+    <table>
+      <thead><th>Text</th><th class="audio-header">Ground Truth</th>
+<th class="audio-header">Taco-Char</th>
+<th class="audio-header">Taco-Phone</th>
+<th class="audio-header">DPS</th>
+<th class="audio-header">Proposed</th></thead>
+      <tbody><tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Хора, които ние не познаваме, но познават българия и изпитват благодарност към нея.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/GT/00000017.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Taco-Char/00000017.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Taco-Phone/00000017.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/DPS/00000017.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Proposed/00000017.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Беше аранжирано и изложение на парфюмерийни продукти с българска роза.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/GT/00000118.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Taco-Char/00000118.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Taco-Phone/00000118.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/DPS/00000118.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Proposed/00000118.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Посоченото означава че тези растения не могат в никакъв случай да бъдат внесени.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/GT/00000319.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Taco-Char/00000319.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Taco-Phone/00000319.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/DPS/00000319.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Proposed/00000319.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Учениците представиха богата празнична програма която включваше много песни, стихотворения и танци.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/GT/00000600.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Taco-Char/00000600.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Taco-Phone/00000600.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/DPS/00000600.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Proposed/00000600.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Посетителите получиха за спомен и дребни сувенири от българия.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/GT/00001143.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Taco-Char/00001143.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Taco-Phone/00001143.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/DPS/00001143.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/bg/Proposed/00001143.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+</tbody>
+    </table>
+
+
+<a name="Malay"><h2>6. Model comparison on Malay</h2></a>
+<p>
+</p>
+    <table>
+      <thead><th>Text</th><th class="audio-header">Ground Truth</th>
+<th class="audio-header">Taco-Char</th>
+<th class="audio-header">Taco-Phone</th>
+<th class="audio-header">DPS</th>
+<th class="audio-header">Proposed</th></thead>
+      <tbody><tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Elok lah tu jika dibandingkan dengan setahun. Mahu gemuk jadinya duduk restoran lama-lama.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/GT/00000685.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Taco-Char/00000685.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Taco-Phone/00000685.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/DPS/00000685.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Proposed/00000685.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Kehilangan Appa buat Sehun dan Hyuk dan diakhiri dengan keguguran InJong. Semuanya diceritakan buat lelaki tersebut.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/GT/00002138.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Taco-Char/00002138.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Taco-Phone/00002138.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/DPS/00002138.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Proposed/00002138.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Nor Azwa Ibrahim yang mewakili Ketua Jabatan Kimia dan Pegawai-Pegawai Sains dari Jabatan Biologi, Kimia dan Fizik.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/GT/00003009.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Taco-Char/00003009.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Taco-Phone/00003009.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/DPS/00003009.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Proposed/00003009.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Anak tengah lena tidur kat belakang, bapaknya pulak menggatal kat depanni.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/GT/00004330.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Taco-Char/00004330.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Taco-Phone/00004330.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/DPS/00004330.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Proposed/00004330.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+<tr><td class="text-cell" style="vertical-align:center"><span class="text_e2e">Darleesa mengomel besar, Siapa yang nak heret dia ke sini? Boleh lah dia banting tulang bersihkan pelosok banglo besar itu.</span></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/GT/00006232.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Taco-Char/00006232.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Taco-Phone/00006232.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/DPS/00006232.wav"></audio></td>
+<td class="audio-cell"><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/ryuclc/sources@latest/audio/CPR/ms/Proposed/00006232.wav"></audio></td>
+</tr>
+
+<tr>
+</tr>
+</tbody>
+    </table>
+    
+  </body>
+</html>
